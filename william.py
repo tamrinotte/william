@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 from logging import basicConfig, DEBUG, debug, disable, CRITICAL
 from itertools import combinations as itercombinations
+from sys import exit as sysexit
 
 # Doing the basic configuration for the debugging feature
 basicConfig(level=DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -25,6 +26,7 @@ class William:
         self.output = output
 
     def generate_wordlist(self):
+        """A function which generates a word list from an another wordlist""" 
 
         print("Generating a Word List")
 
@@ -64,10 +66,12 @@ class William:
         print(f'Output saved to {self.output}')
 
     def display_version(self):
+        """A function which displays the application version"""
 
         print(self.version)
 
 def main():
+    """The main function which runs the entire application"""
 
     # Create an argument parser
     parser = ArgumentParser(description="A command line tool to create a word list from combination of words.")
@@ -109,6 +113,8 @@ def main():
         elif args.capitalize and args.firstword:
 
             print("You can't use capitalize and firstword arguments at the same time.")
+
+            sysexit()
 
         else:
 

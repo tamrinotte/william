@@ -9,7 +9,7 @@ A command line tool to create a word list from combination of words.
 
 1) Download the installer
 
-       curl -L https://github.com/tamrınotte/wıllıam/releases/download/wordlist/william.deb -o wıllıam.deb
+       curl -L https://github.com/tamrinotte/william/releases/download/wordlist/william.deb -o william.deb
 
 2) Start the installer
 
@@ -48,11 +48,11 @@ Kelimelerin kombinasyonlarından başka bir kelime listesi oluşturmak için bir
 
 1) Yükleyiciyi indir
 
-       curl -L https://github.com/tamrınotte/wıllıam/releases/download/wordlist/william.deb -o wıllıam.deb
+       curl -L https://github.com/tamrinotte/william/releases/download/wordlist/william.deb -o william.deb
 
 2) Yükleyiciyi başlat
 
-       sudo dpkg -i wıllıam.deb
+       sudo dpkg -i william.deb
 
 <br>
 

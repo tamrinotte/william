@@ -1,5 +1,5 @@
 # WILLIAM
-![WilliamLogo](https://raw.githubusercontent.com/tamrinotte/infarc/main/app_images/infinity_archive.png)
+![WilliamLogo](https://raw.githubusercontent.com/tamrinotte/william/main/app_images/William%20Logo.png)
 
 A command line tool to create a word list from combination of words.
 
@@ -38,9 +38,9 @@ __-f, --firstword:__ Capitalize each word's first letter
 <br>
 
 # WILLIAM
-![WilliamLogo](https://raw.githubusercontent.com/tamrinotte/infarc/main/app_images/infinity_archive.png)
+![WilliamLogo](https://raw.githubusercontent.com/tamrinotte/william/main/app_images/William%20Logo.png)
 
-Kelimelerin kombinasyonlarından başka kelimeler oluşturmak için bir komut satırı uygulaması
+Kelimelerin kombinasyonlarından başka bir kelime listesi oluşturmak için bir komut satırı uygulaması
 
 <br>
 

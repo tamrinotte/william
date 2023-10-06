@@ -96,7 +96,7 @@ def main():
 
     if args.version:
     
-        app = William(None)  # Pass None since wordlist is not used here
+        app = William(0, 0, None, None, None)  # Pass None since wordlist is not used here
     
         app.display_version()
 

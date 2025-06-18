@@ -1,0 +1,12 @@
+alphabeta
+alphagamma
+betaalpha
+betagamma
+gammaalpha
+gammabeta
+alphabetagamma
+alphagammabeta
+betaalphagamma
+betagammaalpha
+gammaalphabeta
+gammabetaalpha

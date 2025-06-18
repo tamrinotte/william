@@ -54,7 +54,7 @@ class William:
             print(f"Error reading wordlist: {e}")
             sysexit(1)
 
-        combinations = []
+        permutations = []
 
         for r in range(self.min_words, self.max_words + 1):
             for combo in iterpermutations(words, r):
@@ -65,17 +65,17 @@ class William:
                 elif self.modification == "First-Letter":
                     processed_combo[0] = processed_combo[0].capitalize()
 
-                combinations.append("".join(processed_combo))
+                permutations.append("".join(processed_combo))
 
         try:
             with open(self.output_path, "w", encoding="utf-8") as output_file:
-                output_file.write("\n".join(combinations))
+                output_file.write("\n".join(permutations))
         except (FileNotFoundError, IOError) as e:
             print(f"Error writing output file: {e}")
             sysexit(1)
 
-        debug(f"Generated combinations: {combinations}")
-        print(f'Generated {len(combinations)} combinations')
+        debug(f"Generated permutations: {permutations}")
+        print(f'Generated {len(permutations)} permutations')
         print(f'Output saved to {self.output_path}')
         info("Word list has been successfully created.")
 
@@ -88,7 +88,7 @@ class William:
 ##############################
 
 def main():
-    parser = ArgumentParser(description="A command-line tool to create a word list from combinations of words.")
+    parser = ArgumentParser(description="A command-line tool to create a word list from permutations of words.")
 
     parser.add_argument('-v', '--version', action="store_true",
                         help="Display the application's version information.")

@@ -54,28 +54,28 @@ class William:
             print(f"Error reading wordlist: {e}")
             sysexit(1)
 
-        permutations = []
+        list_of_permutations = []
 
         for r in range(self.min_words, self.max_words + 1):
-            for combo in iterpermutations(words, r):
-                processed_combo = list(combo)
+            for permutation in iterpermutations(words, r):
+                processed_permutation = list(permutation)
 
                 if self.modification == "Capitalize":
-                    processed_combo = [word.capitalize() for word in processed_combo]
+                    processed_permutation = [word.capitalize() for word in processed_permutation]
                 elif self.modification == "First-Letter":
-                    processed_combo[0] = processed_combo[0].capitalize()
+                    processed_permutation[0] = processed_permutation[0].capitalize()
 
-                permutations.append("".join(processed_combo))
+                list_of_permutations.append("".join(processed_permutation))
 
         try:
             with open(self.output_path, "w", encoding="utf-8") as output_file:
-                output_file.write("\n".join(permutations))
+                output_file.write("\n".join(list_of_permutations))
         except (FileNotFoundError, IOError) as e:
             print(f"Error writing output file: {e}")
             sysexit(1)
 
-        debug(f"Generated permutations: {permutations}")
-        print(f'Generated {len(permutations)} permutations')
+        debug(f"Generated permutations: {list_of_permutations}")
+        print(f'Generated {len(list_of_permutations)} permutations')
         print(f'Output saved to {self.output_path}')
         info("Word list has been successfully created.")
 
@@ -93,14 +93,14 @@ def main():
     parser.add_argument('-v', '--version', action="store_true",
                         help="Display the application's version information.")
 
-    parser.add_argument("-min", "--minimum", type=int, help="Minimum number of words in a combination.")
-    parser.add_argument("-max", "--maximum", type=int, help="Maximum number of words in a combination.")
+    parser.add_argument("-min", "--minimum", type=int, help="Minimum number of words in a permutation.")
+    parser.add_argument("-max", "--maximum", type=int, help="Maximum number of words in a permutation.")
 
     group = parser.add_mutually_exclusive_group()
     group.add_argument("-c", "--capitalize", action="store_true",
-                       help="Capitalize the first letter of each word in a combination.")
+                       help="Capitalize the first letter of each word in a permutation.")
     group.add_argument("-f", "--firstletter", action="store_true",
-                       help="Capitalize the first letter of the first word in each combination.")
+                       help="Capitalize the first letter of the first word in each permutation.")
 
     parser.add_argument("source_path", nargs="?", help="Path to your input wordlist file.")
     parser.add_argument("destination_path", nargs="?", help="Path to save the generated wordlist.")

@@ -23,13 +23,13 @@ __-h, --help:__ Show the help page.
 
 __-v, --version:__ Show the app version.
 
-__-min, --minimum:__ Minimum number of words in a combination.
+__-min, --minimum:__ Minimum number of words in a permutation.
 
-__-max, --maximum:__  Maximum number of words in a combination.
+__-max, --maximum:__  Maximum number of words in a permutation.
 
-__-c, --capitalize:__ Capitalize the first letter of each word in a combination.
+__-c, --capitalize:__ Capitalize the first letter of each word in a permutation.
 		
-__-f, --firstword:__ Capitalize the first letter of the first word in each combination.
+__-f, --firstword:__ Capitalize the first letter of the first word in each permutation.
 
 <br>
 
@@ -73,13 +73,13 @@ __-h, --help:__ Yardım saysfasını görüntüle.
 
 __-v, --version:__ Uygulama versiyonunu görüntüle.
 
-__-min, --minimum:__ Kombinasyondaki her kelimenin ilk harfini büyük yapın.
+__-min, --minimum:__ Bir permütasyondaki minimum kelime sayısı.
 
-__-max, --maximum:__  Bir kombinasyondaki maksimum kelime sayısı.
+__-max, --maximum:__  Bir permütasyondaki maksimum kelime sayısı.
 
-__-c, --capitalize:__ Herbir alt kelimenin ilk harfini büyük harfle yaz.
+__-c, --capitalize:__ Her permütasyondaki her kelimenin ilk harfini büyük yapın.
 		
-__-f, --firstword:__ Capitalize the first letter of the first word in each combination.
+__-f, --firstword:__ Her permütasyondaki ilk kelimenin ilk harfini büyük yapın.
 
 <br>
 
